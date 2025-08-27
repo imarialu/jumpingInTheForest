@@ -6,7 +6,7 @@ from pygame import Surface, Rect
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/menuBG.png')
+        self.surf = pygame.image.load('./asset/menu_bg.png')
         self.rect = self.surf.get_rect()
 
     def run(self):
