@@ -8,5 +8,7 @@ class Background(Entity):
 
     def move(self):
         self.rect.centerx -= 2
+        # Se o canto direito chegar no esquerdo, a imagem é jogada para a direita novamente
+        # criando o efeito de movimento
         if self.rect.right <= 0:
             self.rect.left = WIN_WIDTH

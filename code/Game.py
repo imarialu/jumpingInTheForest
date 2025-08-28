@@ -13,6 +13,7 @@ class Game:
             menu = Menu(self.window)
             menu_return = menu.run()
 
+            # Caso a opção "NEW GAME" for escolhida, o level 1 é iniciado
             if menu_return == MENU_OPTION[0]:
                 level = Level(self.window, 'Level_1')
                 level_return = level.run()
