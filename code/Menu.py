@@ -6,7 +6,7 @@ from pygame import Surface, Rect
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/menu_bg.png')
+        self.surf = pygame.image.load('./asset/menu_bg.png').convert_alpha()
         self.rect = self.surf.get_rect()
 
     def run(self):
@@ -36,9 +36,10 @@ class Menu:
 
             # Checa os eventos
             for event in pygame.event.get():
+                # Fecha a janela
                 if event.type == pygame.QUIT:
-                    pygame.quit()  # Fecha a janela
-                    quit()  # Finaliza o pygame
+                    pygame.quit()
+                    quit()
                 # Adiciona o evento de seleção
                 if event.type == pygame.KEYDOWN:
                     # Seleção com a rolagem para baixo

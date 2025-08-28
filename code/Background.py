@@ -1,5 +1,5 @@
 from code.Entity import Entity
-from code.Const import WIN_WIDTH, ENTITY_SPEED
+from code.Const import WIN_WIDTH
 
 
 class Background(Entity):
