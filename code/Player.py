@@ -25,11 +25,11 @@ class Player(Entity):
             if not self.rect.x >= 560:
                 self.rect.x += 3
 
-        if self.jump == True:
+        if self.jump:
             self.rect.y -= self.speed
             self.speed -= self.gravity
 
-        if self.rect.y == 190 and self.jump == True:
+        if self.rect.y == 190 and self.jump:
             self.jump = False
             self.speed = 12
 
