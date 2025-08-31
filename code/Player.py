@@ -10,7 +10,7 @@ class Player(Entity):
         self.speed = 12
         self.gravity = 1
 
-    def move(self):
+    def move(self, enemy):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             if self.rect.y == 190 and self.jump == False:
@@ -20,7 +20,6 @@ class Player(Entity):
             if not self.rect.x <= 0:
                 self.rect.x -= 3
 
-        print(self.rect.x)
         if keys[pygame.K_RIGHT]:
             if not self.rect.x >= 560:
                 self.rect.x += 3
@@ -32,5 +31,10 @@ class Player(Entity):
         if self.rect.y == 190 and self.jump:
             self.jump = False
             self.speed = 12
+
+        for ent in enemy:
+            if ent.name == 'obstacle_1':
+                if self.rect.colliderect(ent):
+                    return False
 
         pass

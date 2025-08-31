@@ -10,7 +10,6 @@ EVENT_OBSTACLE = pygame.USEREVENT + 1
 
 # M
 MENU_OPTION = ('NEW GAME',
-               'SCORE',
                'EXIT')
 
 # W

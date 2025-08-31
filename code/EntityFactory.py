@@ -19,4 +19,4 @@ class EntityFactory:
             case 'player':
                 return Player('player', (10, 190))
             case 'obstacle_1':
-                return Obstacle('obstacle_1', (WIN_WIDTH + 10, 190))
+                return Obstacle('obstacle_1', (WIN_WIDTH + 4, 190))

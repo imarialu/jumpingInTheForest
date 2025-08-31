@@ -18,7 +18,7 @@ class Game:
                 level = Level(self.window, 'Level_1')
                 level_return = level.run()
             # Caso a opção "EXIT" for escolhida, a janela é fechada
-            elif menu_return == MENU_OPTION[2]:
+            elif menu_return == MENU_OPTION[1]:
                 pygame.quit()
                 quit()
             else:
